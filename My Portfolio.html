@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Rehman's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3e2904;
+            color: #eaaa50ff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #3e2904;
+            color: #eaaa50ff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #eaaa50ff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #3e2904;
+            color: #eaaa50ff;
+            padding: 0px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 8%;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .content .text {
+            width: 45%;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content img {
+            width: 45%;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-card img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #3e2904;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #533a0d;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #3e2904;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contact-info a {
+            color: #3e2904;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Carousel Slider Styles */
+        .carousel {
+            display: flex;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Project Info Styles */
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body style="background-color: #c1a26b;">
+    <nav>
+        <span><h1>Amna Rehman</h1></span>
+        <div>
+            <a href="#Welcome">Welcome</a>
+            <a href="#Aboutme">About me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="Welcome">
+        <div class="video-container">
+            <iframe width="100" height="50" src="welcomepage.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="Aboutme">
+        <h2>About Me</h2>
+        <div class="content">
+            <div class="text">
+              <h3>Academic Journey</h3>
+              <p>Currently enrolled as a dedicated student pursuing a Bachelor's degree in Computer Science at Sukkur IBA University.
+                Over the course of my academic journey, I have delved deep into various core subjects, including programming languages, data structures, algorithms, and software engineering.
+                The rigorous curriculum and supportive faculty at Sukkur IBA have equipped me with a comprehensive understanding of computer science fundamentals, laying a strong foundation for my future endeavors.
+                Noteworthy achievements include excelling in courses covering C++, full-stack development, and other essential programming paradigms, showcasing a keen aptitude for mastering complex concepts.</p>
+            </div>
+            <img src="about.jpg" alt="Amna Rehman" height="300" width="50">
+        </div>
+        
+        <div class="content">
+          <img src="web.jpg" alt="Amna Rehman" height="300" width="50">
+            <div class="text">
+              <h3>Crafting Digital Experiences</h3>
+              <p>Possess a diverse skill set in full-stack web development, adept at leveraging a wide range of technologies and frameworks to build dynamic and engaging web applications.
+                Proficient in frontend technologies such as HTML5, CSS, Bootstrap, and JavaScript, enabling the creation of visually appealing and responsive user interfaces.
+                Experienced in backend development using Node.js and MySQL, allowing for the implementation of robust server-side logic and database management.
+                Have successfully completed various web development projects, including e-commerce websites, enterprise applications, and social media platforms, each demonstrating a meticulous attention to detail and a commitment to delivering high-quality solutions.</p>
+            </div>
+         
+        </div>
+
+       
+        <div class="content">
+            <div class="text">
+              <h3> Driving Innovation through Technology</h3>
+                <p>Driven by a passion for innovation and a relentless curiosity to explore the limitless possibilities of technology.
+                  Thrive on challenges and enjoy applying creativity and analytical thinking to devise innovative solutions for real-world problems.
+                  Notable projects include the development of a robot controller and a language translator, highlighting my ability to tackle complex problems and translate ideas into tangible solutions using technology.
+                  Particularly interested in the fields of Artificial Intelligence (AI) and Machine Learning (ML), constantly seeking to deepen my understanding and leverage these cutting-edge technologies to address pressing societal issues.</p>
+            </div>
+                  <img src="AI.jpg" alt="Amna Rehman" height="300" width="50">
+        </div>
+
+    
+        <div class="content">
+          <img src="tec.jpg" alt="Amna Rehman" height="300" width="50">
+            <div class="text">
+              <h3>Embracing the Future of Technology</h3>
+              <p>Intrigued by emerging technology trends, with a keen interest in exploring the potential of cloud computing and managed IT services to revolutionize the way we approach system architecture and infrastructure.
+                Recognize the transformative power of these technologies in enhancing system efficiency, scalability, and security, and eager to stay abreast of the latest developments in the field.
+                Open to collaborating with industry professionals and experts to gain valuable insights and broaden my knowledge horizons, with the ultimate goal of contributing to the advancement of technology and driving positive change in society.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Projects">
+      <nav>
+        <span><h1>Amna Rehman</h1></span>
+        <div>
+            <a href="#Welcome">Welcome</a>
+            <a href="#Aboutme">About me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+        <h2>Projects</h2>
+        <div class="container">
+            <div class="carousel">
+                <div class="slide" style="background-image: url('luxecart.jpg');">
+                    <div class="project-info">
+                        <h3>Luxecart App</h3>
+                        <p>Welcome to Luxecart, a cutting-edge e-commerce website that stands as a testament to proficiency in web engineering...</p>
+                        <p><strong>Skills:</strong> Web Development, Web Applications, Responsive Web Design, Back-End Web Development, Document Object Model (DOM), React.js, HTML5, CSS, JavaScript, Node.js, AJAX, Web Services API, e-commerce api</p>
+                        <p><strong>Period:</strong> Nov 2023 - Jan 2024</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('railway_reservation.jpg');">
+                    <div class="project-info">
+                        <h3>Online Railway Reservation System in C++</h3>
+                        <p>In my first semester of Computer Science, I embarked on a captivating journey to create an innovative Online Railway Reservation Application...</p>
+                        <p><strong>Skills:</strong> C++, Filing, Graphics from C language, Conditional statements, Nested loops</p>
+                        <p><strong>Period:</strong> Nov 2021 - Jan 2022</p>
+                    </div>
+                </div>
+                <!-- Add more slides for other projects similarly -->
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="Services">
+      <nav>
+        <span><h1>Amna Rehman</h1></span>
+        <div>
+            <a href="#Welcome">Welcome</a>
+            <a href="#Aboutme">About me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+        <h2>Services</h2>
+        <div class="container">
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="mern.png" alt="Full Stack Developer">
+                    <h3>Full Stack Developer</h3>
+                    <p>Expertise in both frontend and backend technologies, capable of building complete web applications from scratch.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="uiux.jpg" alt="UI/UX Designer">
+                    <h3>UI/UX Designer</h3>
+                    <p>Design visually appealing and user-friendly interfaces to enhance user experience and satisfaction.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="pythonjava.jpg" alt="Python and Java Developer">
+                    <h3>Python and Java Developer</h3>
+                    <p>Proficient in Python and Java programming languages, with experience in developing robust and scalable applications.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="EAD.png" alt="Enterprise Application Developer">
+                    <h3>Enterprise Application Developer</h3>
+                    <p>Specialize in developing large-scale enterprise applications tailored to meet specific business needs.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="ai.jpg" alt="AI and ML Developer">
+                    <h3>AI and ML Developer</h3>
+                    <p>Utilize AI and ML algorithms to develop intelligent systems and predictive models for various applications.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="dbms.png" alt="Database Developer">
+                    <h3>Database Developer</h3>
+                    <p>Design and optimize databases to efficiently store and retrieve data, ensuring reliability and scalability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+      <nav>
+        <span><h1>Amna Rehman</h1></span>
+        <div>
+            <a href="#Welcome">Welcome</a>
+            <a href="#Aboutme">About me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+        <h2>Contact</h2>
+        <div class="container">
+            <form action="mailto:amnarehmanarain@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="question">Question:</label>
+                <textarea id="question" name="question" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <div class="contact-info">
+                <p>Contact us via email: <a href="mailto:amnarehmanarain@gmail.com">amnarehmanarain@gmail.com</a></p>
+                <p>Connect with us on LinkedIn: <a href="https://www.linkedin.com/in/itx-amna-rehman-123456bgz/">Amna Rehman's LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 | Amna Rehman's Portfolio | All Rights Reserved! </p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+            });
+        }
+    </script>
+</body>
+
+</html>
